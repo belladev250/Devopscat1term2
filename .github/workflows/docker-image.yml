@@ -66,6 +66,6 @@ jobs:
             file: ./Electricity-app-backend/Dockerfile
             builder: ${{ steps.buildx.outputs.name }}
             push: true
-            tags: ${{ secrets.DOCKER_HUB_USERNAME }}/server:latest
+            tags: ${{ secrets.DOCKERHUB_USERNAME }}/server:latest
             cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/server:buildcache
             cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/server:buildcache,mode=max

@@ -1,45 +1,29 @@
-version: '3'
+version: '3.8'
 services:
-  postgres:
-    image: my-postgres
-    container_name: postgres
-    restart: always
-    build:
+  backend:
+    tty: true
+    stdin_open: true
+    build: 
+      context: Electricity-app-Backend
       dockerfile: Dockerfile
-      context: postgres
-    ports:
-      - "5432:5432"
-    environment:
-        POSTGRES_HOST: localhost
-        POSTGRES_PORT: 5432
-        POSTGRES_USER: melissa
-        POSTGRES_PASSWORD: 123
-        POSTGRES_DB: electric
-   
-    volumes:
-      - postgres:/var/lib/postgresql/data
+  frontend:
+    tty: true
+    stdin_open: true
+    build: 
+      context: Electricity-app-frontend
+      dockerfile: Dockerfile
 
-volumes:
-  postgres:
-    name: elec-db
-
-
-  electricity-app-frontend:
+  db:
+    tty: true
     stdin_open: true
     build:
-      dockerfile: Dockerfile
-      context: Electricity-app-frontend
+      context:  Electricity-app-backend
+      dockerfile: db.Dockerfile
+    ports:
+      - "5432:5432"
     volumes:
-      - ./Electricity-app-frontend:/Elec-app
-
-  electricity-app-backend:
-    build:
-      dockerfile: Dockerfile
-      context: Electricity-app-backend
-    volumes:
-      - ./Electricity-app-backend:/Elec-app
-   
-  volumes:
-   frontend:
-   backend:
-   db:
+      - db:/var/lib/postgresql/data
+volumes:
+  apis:
+  frontend:
+  db:

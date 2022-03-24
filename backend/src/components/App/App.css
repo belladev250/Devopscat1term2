@@ -1,0 +1,99 @@
+body {
+  background-color: white;
+  margin-top: 8%;
+  text-align: center;
+  color: #4d173d;
+}
+.header{
+  color: #4d173d;
+}
+p{
+  margin-top: -1%;
+  color: #4d173d;
+}
+
+input {
+  background-color: #fff !important;
+  border-radius: 10px !important;
+  width: 30% !important;
+  padding: 0px 15px !important;
+  margin-top: 40x;
+}
+
+input:focus {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+label {
+  display: block;
+  margin-left: -20%;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  color: #4d173d !important;
+  font-size: 1rem !important;
+}
+
+.calculate-btn {
+  background-color: #64104b;
+  padding: 15px 50px;
+  color: white;
+  font-size: 16px;
+  border-radius: 44px;
+  cursor: pointer;
+  border: 1px solid #4d173d;
+  margin-bottom: 40px;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+}
+
+.calculate-btn:hover {
+  background-color: #fff;
+  transform: translate(0px, -2px);
+  color: #4d173d;
+  box-shadow: 0px 15px 30px -12px rgba(255, 255, 255, 0.2);
+}
+
+.calculate-btn:focus {
+  background-color: #32408f;
+}
+
+.calculate-btn:focus:hover {
+  color: #4d173d;
+}
+
+.calculate-btn:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #000000;
+  cursor: default;
+}
+
+.calculate-btn:disabled:hover {
+  box-shadow: none;
+  transform: translate(0, 0);
+}
+
+.data-container {
+  background-color: #4d173d;
+  border-radius: 1px;
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.card {
+  background-color: #4d173d !important;
+  color: white;
+}
+
+.card-title {
+  font-weight: 500 !important;
+  text-align: center;
+}
+
+.card-data {
+  display: flex;
+  justify-content: space-around;
+}
+

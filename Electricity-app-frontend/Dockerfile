@@ -1,5 +1,5 @@
 FROM node:14.14.0-alpine
-WORKDIR "/Elec-app"
+WORKDIR /usr/app
 COPY ./package.json ./
 RUN npm install
 COPY . .

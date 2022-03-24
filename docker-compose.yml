@@ -1,12 +1,12 @@
 version: '3.8'
 services:
-  backend:
+  electricity-app-backend:
     tty: true
     stdin_open: true
     build: 
       context: Electricity-app-Backend
       dockerfile: Dockerfile
-  frontend:
+  electricity-app-frontend:
     tty: true
     stdin_open: true
     build: 
@@ -24,6 +24,6 @@ services:
     volumes:
       - db:/var/lib/postgresql/data
 volumes:
-  apis:
-  frontend:
+  electricity-app-backend:
+  electricity-app-frontend:
   db:
